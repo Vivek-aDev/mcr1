@@ -1,0 +1,148 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  #taskInput {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #addTaskBtn {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #addTaskBtn:hover {
+    background-color: #218838;
+  }
+  
+  #taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .task span {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .task span.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  .deleteBtn,
+  .updateBtn,
+  .completeBtn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .deleteBtn {
+    background-color: #dc3545;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+  }
+  
+  .updateBtn {
+    background-color: #ffc107;
+  }
+  
+  .updateBtn:hover {
+    background-color: #e0a800;
+    transform: scale(1.1);
+  }
+  
+  .completeBtn {
+    background-color: #28a745;
+  }
+  
+  .completeBtn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+  }
+  
+  .completeIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
